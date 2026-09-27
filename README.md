@@ -1,5 +1,5 @@
 # Plant Irrigation System 
-- This project senses the soil of a specific plant to irrigate it automatically without human intervention, while still getting updates about the soil moisture degree.
+- This project senses the soil of a specific plant to irrigate it automatically without human intervention, while still getting updates remotely about the soil moisture degree.
 
 ## How to upload 
 - install Arduino IDE
