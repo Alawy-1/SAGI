@@ -24,3 +24,5 @@
 - add more routes and features that could be preformed remotely
 - moving robot that irrigates more than one plant
 - use weather api to enhance the irrigation system
+
+This project is under the MIT LICENSE 
