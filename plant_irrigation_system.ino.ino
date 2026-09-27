@@ -6,9 +6,10 @@ const int soilPin = 4;
 const int relayPin = 26;
 const int DRY_VALUE = 3400; 
 const int WET_VALUE = 3100;
+const int threshold = 3230;
 
-const char* ssid = "OPPO_6ED7F4_2.4G";
-const char* password = "4nUyCQiZ";
+const char* ssid = "Tuwaiq's Students";
+const char* password = "Tuwaiq@001";
 
 WebServer server(80);
 
@@ -56,7 +57,7 @@ void setup() {
   Serial.println();
 
   // Wait for the IP to be assigned
-  delay(2000);
+  delay(4000);
 
   Serial.println("Wi-Fi connected!");
   Serial.print("IP address: ");
@@ -82,17 +83,14 @@ void loop() {
   Serial.print("soil Pin value:");
   Serial.println(soilValue);
 
-  //here I should have a threshold since the if condition are contradicting
-  if(soilValue > WET_VALUE){
+  if(soilValue > threshold){
     digitalWrite(ledPin, HIGH);
     //digitalWrite(relayPin, HIGH);
     Serial.println("LED ON | PUMP ON");
-  } else if (soilValue < DRY_VALUE){
+  } else {
     digitalWrite(ledPin, LOW);
     //digitalWrite(relayPin, LOW);
     Serial.println("LED OFF | PUMP OFF");
-  } else {
-    Serial.println("between Dry and Wet");
   }
   
   delay(10000);
